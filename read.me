@@ -1,0 +1,10 @@
+// SERVICE CUSTOMER
+dapr run --app-id customer-service --app-port 8081 --dapr-http-port 3501 -- go run customer-service/main.go
+
+// SERVICE PRODUCT
+dapr run --app-id product-service --app-port 8082 --dapr-http-port 3502 -- go run product-service/main.go
+
+// SERVICE TRANSACTION
+dapr run --app-id transaction-service --app-port 8083 --dapr-http-port 3503 -- go run transaction-service/main.go
+
+dapr dashboard
